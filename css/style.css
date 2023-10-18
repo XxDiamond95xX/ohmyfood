@@ -1,0 +1,273 @@
+* {
+  font-family: "roboto", sans-serif;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0 3rem;
+}
+
+.fa-store {
+  color: #9356dc;
+}
+
+ol {
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.badges {
+  position: relative;
+  bottom: 8.5rem;
+  float: right;
+  z-index: 2;
+  right: 0.5rem;
+}
+
+.checkbox__container {
+  cursor: pointer;
+  caret-color: transparent;
+  display: block;
+}
+
+.checkbox__container input {
+  display: none;
+}
+
+.img-checked {
+  display: none;
+}
+
+.checkbox__container input:checked ~ .img-checked {
+  display: inline;
+}
+
+.checkbox__container input:checked ~ .img-unchecked {
+  display: none;
+}
+
+.btn {
+  background: linear-gradient(#ff79da, #9356dc);
+  border-radius: 2rem;
+  padding: 0.81rem 1.17rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 3.57rem;
+  cursor: pointer;
+  border-style: hidden;
+  transition: filter;
+  transition-duration: 400ms;
+}
+.btn:hover {
+  filter: brightness(1.2);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header .header__logo {
+  height: 1.7rem;
+  margin: 1.06rem;
+}
+header .header__location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #eaeaea;
+}
+
+.header__location__city {
+  font-weight: bold;
+  padding: 0 1rem;
+}
+
+.exploration-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #f6f6f6;
+}
+
+.operation-section {
+  padding: 3.38rem 1rem;
+}
+
+.top-card {
+  box-shadow: 5px 5px 10px 0 #eaeaea;
+  display: flex;
+  align-items: center;
+  border: 0 solid;
+  margin: 2rem 1rem;
+  border-radius: 1rem;
+  background-color: #f6f6f6;
+  list-style: none;
+  font-weight: bold;
+  gap: 0.8rem;
+}
+.top-card .operation-section__num {
+  position: relative;
+  right: 1rem;
+  border: 0.1rem solid;
+  border-radius: 2rem;
+  padding: 0.3rem;
+  background-color: #9356dc;
+  color: #ffffff;
+  width: 1.2rem;
+  text-align: center;
+}
+
+.restaurant-section {
+  background-color: #f6f6f6;
+  padding: 3.38rem 1rem;
+}
+
+.card {
+  max-width: 30.63rem;
+  height: 15.69rem;
+  border-radius: 0.94rem;
+  background-color: #ffffff;
+  margin: 1rem 0;
+}
+.card .card__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+  height: 10rem;
+  max-width: 30.63rem;
+  box-sizing: content-box;
+}
+
+.content__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+}
+.content__container .card__container {
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+}
+
+.card__title {
+  margin: 0;
+}
+
+#charonne {
+  position: relative;
+  left: 5.55rem;
+}
+
+#menilmontant {
+  position: relative;
+  left: 5.55rem;
+}
+
+.city {
+  white-space: nowrap;
+  margin: 0.2rem 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+footer {
+  background-color: #353535;
+  color: #ffffff;
+  padding: 1.38rem 1.63rem;
+}
+footer .footer__img {
+  height: 1rem;
+  filter: invert(100%);
+}
+
+ul {
+  padding: 0;
+}
+
+.footer__list {
+  list-style: none;
+  padding: 0.5rem 0;
+  display: flex;
+  gap: 0.5rem;
+  color: white;
+}
+
+@media (min-width: 767.98px) {
+  .restaurant-section__card {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+  }
+  ol {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .top-card {
+    padding-right: 3rem;
+    justify-content: center;
+    white-space: nowrap;
+    gap: 2rem;
+  }
+  .section {
+    padding: 1rem 7.5rem;
+  }
+  footer {
+    padding: 3.38rem 1.63rem;
+  }
+  footer .footer__img {
+    position: relative;
+    float: right;
+  }
+  li {
+    display: flex;
+    flex-direction: row;
+  }
+  .footer__list {
+    position: relative;
+    float: inline-start;
+    bottom: 1rem;
+    left: 24rem;
+  }
+  #f-list1 {
+    font-weight: bold;
+    padding-right: 1rem;
+  }
+  #f-list2 {
+    padding-left: 2rem;
+  }
+}
+@media (max-width: 996px) {
+  ol {
+    display: unset;
+    padding: unset;
+  }
+  .top-card {
+    padding-right: unset;
+    justify-content: unset;
+  }
+  #f-list {
+    color: white;
+  }
+}/*# sourceMappingURL=style.css.map */

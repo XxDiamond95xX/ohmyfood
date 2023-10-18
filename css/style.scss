@@ -1,0 +1,317 @@
+* {
+  font-family: 'roboto', sans-serif;
+}
+
+// variables
+$Background:#f6f6f6;
+$Primary: #9356dc;
+$Secondary: #fca311;
+$Green: #99E2D0;
+$Green-font: #008766;
+$White: #ffffff;
+$Black:#101010;
+$Grey: #353535;
+$grey2: #eaeaea;
+
+
+// mixin
+@mixin button-gradient{
+background-color:linear-gradient(#9356dc,#ff79da);}
+
+@mixin column-center{
+  display:flex;
+  flex-direction: column;
+  align-items: center;}
+
+@mixin row-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;}
+
+@mixin button{
+border-radius:2rem;
+padding: 0.81rem 1.17rem;
+font-size: 1rem;
+font-weight: bold;
+color: $White;
+margin-bottom: 3.57rem;
+cursor : pointer;}
+
+@mixin card-shadow {
+  box-shadow:5px 5px 10px 0 $grey2;}
+
+@mixin section-items{
+  padding: 3.38rem 1rem;
+}
+
+
+// body
+
+h1 {
+  font-size: 1.5rem;
+  font-weight:bold;
+  padding: 0 3rem;
+}
+
+.fa-store{
+  color: $Primary;
+}
+
+ol{
+  padding: 0;
+}
+
+body{
+  margin:0;
+  min-width: 320px;
+}
+
+.section-title{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+ .badges{
+  position: relative;
+  bottom: 8.5rem;
+  float: right;
+  z-index: 2;
+  right: 0.5rem;
+}
+
+.checkbox__container{
+  cursor: pointer;
+  caret-color: transparent;
+  display: block;
+}
+
+.checkbox__container input{
+  display: none;
+}
+
+.img-checked{
+  display: none;
+}
+
+.checkbox__container input:checked ~ .img-checked {
+  display: inline;
+}
+
+.checkbox__container input:checked ~ .img-unchecked {
+  display: none;}
+
+.btn{
+background:linear-gradient(#ff79da,#9356dc,); 
+@include button;
+border-style: hidden;
+transition: filter;
+transition-duration: 400ms;
+&:hover {
+  filter: brightness(1.2);
+  }
+}
+
+header{
+  @include column-center;
+  .header__logo{
+    height: 1.7rem;
+    margin: 1.06rem;}
+    .header__location{
+      @include row-center;
+      width: 100%;
+      background-color: $grey2;}
+}
+
+.header__location__city{
+  font-weight: bold;
+  padding: 0 1rem;
+}
+
+.exploration-section{
+  @include column-center;
+  text-align: center;
+  background-color: $Background;
+}
+
+.operation-section{
+  @include section-items
+}
+
+.top-card{
+  @include card-shadow;
+  display: flex;
+  align-items: center;
+  border: 0 solid;
+  margin:2rem 1rem;
+  border-radius:1rem;
+  background-color:$Background;
+  list-style: none;
+  font-weight: bold;
+  gap: 0.8rem;
+  .operation-section__num{ 
+    position:relative;
+    right: 1rem;
+    border: 0.1rem solid;
+    border-radius: 2rem;
+    padding: 0.3rem;
+    background-color: $Primary;
+    color: $White;
+    width: 1.2rem;
+    text-align: center;
+ }
+}
+ 
+.restaurant-section{
+  background-color: $Background;
+  @include section-items
+}
+
+.card{
+  max-width: 30.63rem;
+  height: 15.69rem;
+  border-radius: 0.94rem;
+  background-color: $White;
+  margin: 1rem 0;
+  .card__img{
+    object-fit: cover;
+    width:100%;
+    border-radius: 1rem 1rem 0 0;
+    height: 10rem;
+    max-width: 30.63rem;
+    box-sizing: content-box;
+  }
+}
+
+.content__container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+  .card__container{
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+  }    
+}
+   
+.card__title{
+ margin: 0;   
+}
+
+#charonne{
+  position: relative;
+  left: 5.55rem;
+}
+
+#menilmontant{
+  position: relative;
+  left: 5.55rem;
+}
+
+.city{
+  white-space: nowrap;
+  margin:0.2rem 0;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+footer{
+  background-color: $Grey; 
+  color: $White;
+  padding:1.38rem 1.63rem;
+  .footer__img{
+    height:1rem;
+    filter: invert(100%);
+    }
+  }
+
+ul{
+  padding: 0;
+}
+
+.footer__list{
+  list-style: none;
+  padding: 0.5rem 0;
+  display: flex;
+  gap: 0.5rem;
+  color: white;
+}
+
+// media queries
+
+@media (min-width: 767.98px) {
+	.restaurant-section__card {
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-column-gap: 2rem;
+		grid-row-gap: 2rem;
+	}
+  
+  ol{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   gap: 2rem;
+  }
+ 
+  .top-card{
+   padding-right:3rem;
+   justify-content: center;
+   white-space: nowrap;
+   gap: 2rem;
+ }
+
+ .section{
+  padding:1rem 7.5rem;
+ }
+
+footer{
+  padding: 3.38rem 1.63rem;
+}
+
+ footer .footer__img{
+  position: relative;
+  float: right;
+ 
+ }
+
+li{
+  display: flex;
+  flex-direction: row;
+}
+
+.footer__list{
+  position: relative;
+  float: inline-start;
+  bottom: 1rem;
+  left: 24rem;
+}
+
+#f-list1{
+  font-weight: bold;
+  padding-right: 1rem;
+}
+
+#f-list2{
+  padding-left: 2rem;
+}
+}
+
+@media (max-width: 996px){
+ ol{
+  display: unset;
+  padding: unset;
+ }
+
+.top-card{
+  padding-right: unset;
+  justify-content: unset;
+}
+
+#f-list{
+  color: white;
+}
+
+}
