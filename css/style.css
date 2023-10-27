@@ -24,6 +24,7 @@ body {
 .section-title {
   font-size: 1.5rem;
   font-weight: bold;
+  margin: 0;
 }
 
 .badges {
@@ -34,26 +35,20 @@ body {
   right: 0.5rem;
 }
 
-.checkbox__container {
-  cursor: pointer;
-  caret-color: transparent;
-  display: block;
+.favorite {
+  display: flex;
+  position: relative;
 }
-
-.checkbox__container input {
-  display: none;
+.favorite .img-checked {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 400ms ease-in-out;
 }
-
-.img-checked {
-  display: none;
+.favorite .img-checked:hover {
+  opacity: 100%;
 }
-
-.checkbox__container input:checked ~ .img-checked {
-  display: inline;
-}
-
-.checkbox__container input:checked ~ .img-unchecked {
-  display: none;
+.favorite .img-checked:hover .img-unchecked {
+  position: absolute;
 }
 
 .btn {
@@ -103,10 +98,6 @@ header .header__location {
   background-color: #f6f6f6;
 }
 
-.operation-section {
-  padding: 3.38rem 1rem;
-}
-
 .top-card {
   box-shadow: 5px 5px 10px 0 #eaeaea;
   display: flex;
@@ -133,11 +124,10 @@ header .header__location {
 
 .restaurant-section {
   background-color: #f6f6f6;
-  padding: 3.38rem 1rem;
 }
 
 .card {
-  max-width: 30.63rem;
+  min-width: 21.25rem;
   height: 15.69rem;
   border-radius: 0.94rem;
   background-color: #ffffff;
@@ -149,7 +139,6 @@ header .header__location {
   width: 100%;
   border-radius: 1rem 1rem 0 0;
   height: 10rem;
-  max-width: 30.63rem;
   box-sizing: content-box;
 }
 
@@ -211,63 +200,46 @@ ul {
   color: white;
 }
 
-@media (min-width: 767.98px) {
-  .restaurant-section__card {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-column-gap: 2rem;
-    grid-row-gap: 2rem;
+@media (min-width: 767px) {
+  .section {
+    padding: 2rem 11.25rem;
   }
   ol {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: 34% 34% 34%;
+    width: 98%;
   }
-  .top-card {
-    padding-right: 3rem;
-    justify-content: center;
-    white-space: nowrap;
-    gap: 2rem;
+  .restaurant-section__card {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 0 2rem;
   }
-  .section {
-    padding: 1rem 7.5rem;
-  }
-  footer {
-    padding: 3.38rem 1.63rem;
+  .card {
+    width: 100%;
   }
   footer .footer__img {
     position: relative;
     float: right;
-  }
-  li {
-    display: flex;
-    flex-direction: row;
+    top: 2rem;
   }
   .footer__list {
+    width: 100%;
+    display: flex;
+    justify-content: end;
     position: relative;
-    float: inline-start;
-    bottom: 1rem;
-    left: 24rem;
+    right: 4rem;
+    bottom: 0.55rem;
   }
-  #f-list1 {
-    font-weight: bold;
-    padding-right: 1rem;
-  }
-  #f-list2 {
-    padding-left: 2rem;
+  ul {
+    display: inline-flex;
+    gap: 1rem;
   }
 }
-@media (max-width: 996px) {
+@media (max-width: 1240px) {
   ol {
     display: unset;
-    padding: unset;
   }
-  .top-card {
-    padding-right: unset;
-    justify-content: unset;
-  }
-  #f-list {
-    color: white;
+  .section {
+    padding: 1rem 5%;
   }
 }/*# sourceMappingURL=style.css.map */

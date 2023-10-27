@@ -40,10 +40,6 @@ cursor : pointer;}
 @mixin card-shadow {
   box-shadow:5px 5px 10px 0 $grey2;}
 
-@mixin section-items{
-  padding: 3.38rem 1rem;
-}
-
 
 // body
 
@@ -69,6 +65,7 @@ body{
 .section-title{
   font-size: 1.5rem;
   font-weight: bold;
+  margin: 0;
 }
  .badges{
   position: relative;
@@ -78,26 +75,21 @@ body{
   right: 0.5rem;
 }
 
-.checkbox__container{
-  cursor: pointer;
-  caret-color: transparent;
-  display: block;
+.favorite{
+  display: flex;
+  position: relative;
+  .img-checked{
+    position: absolute;
+    opacity:0;
+    transition:opacity 400ms ease-in-out;
+    &:hover{
+    opacity: 100%;
+    .img-unchecked{
+      position: absolute;
+      }
+    }
+  }
 }
-
-.checkbox__container input{
-  display: none;
-}
-
-.img-checked{
-  display: none;
-}
-
-.checkbox__container input:checked ~ .img-checked {
-  display: inline;
-}
-
-.checkbox__container input:checked ~ .img-unchecked {
-  display: none;}
 
 .btn{
 background:linear-gradient(#ff79da,#9356dc,); 
@@ -132,9 +124,6 @@ header{
   background-color: $Background;
 }
 
-.operation-section{
-  @include section-items
-}
 
 .top-card{
   @include card-shadow;
@@ -162,11 +151,10 @@ header{
  
 .restaurant-section{
   background-color: $Background;
-  @include section-items
 }
 
 .card{
-  max-width: 30.63rem;
+  min-width: 21.25rem;
   height: 15.69rem;
   border-radius: 0.94rem;
   background-color: $White;
@@ -176,7 +164,6 @@ header{
     width:100%;
     border-radius: 1rem 1rem 0 0;
     height: 10rem;
-    max-width: 30.63rem;
     box-sizing: content-box;
   }
 }
@@ -240,78 +227,51 @@ ul{
 }
 
 // media queries
-
-@media (min-width: 767.98px) {
-	.restaurant-section__card {
-		display: grid;
-		grid-template-columns: 50% 50%;
-		grid-column-gap: 2rem;
-		grid-row-gap: 2rem;
-	}
-  
-  ol{
-   display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
-   gap: 2rem;
+@media(min-width: 767px){
+  .section{
+  padding:2rem 11.25rem;
   }
- 
-  .top-card{
-   padding-right:3rem;
-   justify-content: center;
-   white-space: nowrap;
-   gap: 2rem;
- }
+  ol{
+    display: grid;
+    grid-template-columns: 34% 34% 34%;
+    width: 98%;
+  }
+  .restaurant-section__card{
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    gap: 0 2rem;
+  }
+  .card{
+    width: 100%;
+  }
 
- .section{
-  padding:1rem 7.5rem;
- }
-
-footer{
-  padding: 3.38rem 1.63rem;
+  footer .footer__img{
+    position: relative;
+    float: right;
+    top: 2rem;
 }
 
- footer .footer__img{
-  position: relative;
-  float: right;
- 
- }
+  .footer__list{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    position: relative;
+    right: 4rem;
+    bottom: 0.55rem;
+  }
 
-li{
-  display: flex;
-  flex-direction: row;
+  ul{
+    display: inline-flex;
+    gap: 1rem;
+  }
+
 }
 
-.footer__list{
-  position: relative;
-  float: inline-start;
-  bottom: 1rem;
-  left: 24rem;
-}
-
-#f-list1{
-  font-weight: bold;
-  padding-right: 1rem;
-}
-
-#f-list2{
-  padding-left: 2rem;
-}
-}
-
-@media (max-width: 996px){
- ol{
-  display: unset;
-  padding: unset;
- }
-
-.top-card{
-  padding-right: unset;
-  justify-content: unset;
-}
-
-#f-list{
-  color: white;
-}
+@media(max-width:1240px){
+  ol{display: unset;
+  }
+  .section{
+    padding: 1rem 5%;
+  }
 
 }

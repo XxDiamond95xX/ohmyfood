@@ -1,0 +1,270 @@
+* {
+    font-family: 'roboto', sans-serif;
+  }
+
+// variables
+$Background:#f6f6f6;
+$Primary: #9356dc;
+$Secondary: #fca311;
+$Green: #99E2D0;
+$Green-font: #008766;
+$White: #ffffff;
+$Black:#101010;
+$Grey: #353535;
+$grey2: #eaeaea;
+
+@mixin txt{
+    display: flex;
+    flex: 100%;
+    white-space: nowrap;
+    flex-direction: column;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transition: all 700ms;
+    padding: 0.5rem;
+}
+
+body{
+    margin:0;
+    overflow-x: hidden;
+    background-color: $Background;
+}
+
+header{
+height: 3%;
+justify-content: center;
+display: grid;
+grid-template-columns: 33% 33% 33%;
+padding: 0.88rem 0;
+background-color: $White;
+    .header__btn{
+        width: 10%;
+        background-color:$White;
+        border-style: none;
+        cursor: pointer;
+        
+    }
+}
+
+.header__logo{
+    justify-self: center;
+    cursor: pointer;
+    width: 100%;
+}
+.top-image{
+    width: 100%;
+    height: 16rem;
+    object-fit: cover;
+}
+.fa-arrow-left{
+    font-size: medium;
+    &__btn{
+        background: white;
+        border: none;
+        cursor: pointer;
+    }
+}
+    
+.top-title{
+    border-radius:1rem;
+    transform: translateY(-45px);
+    padding:2rem 1rem 0;
+    background-color:$Background;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.favorite{
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    padding: 0 1.5rem;
+    .img-checked{
+      position: absolute;
+      opacity:0;
+      transition:opacity 400ms ease-in-out;
+      &:hover{
+      opacity: 100%;
+      .img-unchecked{
+        position: absolute;
+        height: 1.3rem;
+        }
+      }
+    }
+  }
+
+h1{
+    font-family: 'Shrikhand', 'cursive';
+    margin: 0;
+    font-size: 1.35rem;
+}
+
+h2{
+    font-weight:300 ;
+    font-size: 16px;
+}
+
+h3{
+    margin: 0;
+    font-size: 0.95rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.title{
+    display: inline-block;
+    border-bottom:0.2rem solid $Green;
+    width:2.6rem;
+}
+
+ul{
+    padding: 0;
+}
+
+.menu p{
+    margin-bottom: 0.3rem;
+}
+
+.card{
+    background-color:$White;
+    box-shadow: 2px 2px 2px $grey2;
+    border-radius: 1rem 1rem;
+    margin: 1rem;
+    display: flex;
+    justify-content: space-between;
+    transition: all 2000ms;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &:hover >.card__check{
+        flex: 25%;
+        transform: translateX(0px);
+        background-color: $Green;
+        cursor: pointer;
+        color:$Background;
+
+    }
+}
+
+.entrees__card{
+    animation-name: appear;
+    animation-duration: 1000ms;
+    animation-fill-mode: backwards;
+    animation-delay: 0s;
+    &__txt{
+     @include txt
+    }
+}  
+
+.plats__card{
+    animation-name:appear;
+    animation-duration: 1000ms;
+    animation-fill-mode: backwards;
+    animation-delay: 500ms;
+    &__txt{
+        @include txt
+    }
+}
+
+.dessert__card{
+    animation-name: appear;
+    animation-duration: 1000ms;
+    animation-fill-mode: backwards;
+    animation-delay: 1s;
+    &__txt{
+        @include txt
+    }
+}
+
+.card__check{
+    flex: 0%;
+    color: $Background;
+    background-color: #99e2d0;
+    font-size: x-large;
+    text-align: center;
+    line-height: 4rem;
+    white-space: nowrap;
+    transform: translateX(100px);
+    transition: all ease-out 500ms;
+    width: 0;
+}
+
+.card__txt__detail p{
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 0.95rem;
+}
+
+.card__txt__detail{
+    display: flex;
+    justify-content: space-between;
+    &__sub{
+        text-overflow: ellipsis;
+        
+    }    
+}
+
+.card__txt__detail__price{
+    font-weight: bold;
+}
+
+.bottom__btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+    .btn{
+        border-radius:2rem;
+        padding: 0.81rem 2rem;
+        font-size: 1rem;
+        color: $White;
+        cursor : pointer;
+        background:linear-gradient(#ff79da,#9356dc,);
+        border-style: hidden;
+        transition: filter;
+        transition-duration: 400ms;
+        &:hover {
+          filter: brightness(1.15);
+          }
+    }   
+}
+
+a{
+    text-decoration: none;
+    color: $White;
+}
+
+footer{
+    background-color: $Grey; 
+    color: $White;
+    padding:1.38rem 1.63rem;
+    transform: translateY(2.5rem);
+    .footer__img{
+      height:1rem;
+      filter: invert(100%);
+      }
+    }
+
+.footer__list{
+    list-style: none;
+    padding: 0.5rem 0;
+    display: flex;
+    gap: 0.5rem;
+    color:$White;
+  }
+
+@keyframes appear{
+
+0% {transform: translateY(-100px);
+        opacity:0;}
+100% {
+        opacity:1
+        translateY(0)
+    }}
+
+ 
+
+
+
+
+

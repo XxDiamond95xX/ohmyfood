@@ -7,7 +7,7 @@
         <script src="https://kit.fontawesome.com/e4d8d0b106.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Roboto:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&family=Shrikhand&display=swap" rel="stylesheet">  
         <title>Ohmyfood</title>
     </head>
     <body>
@@ -32,7 +32,8 @@
             </ol>
         </section>
         <section class="restaurant-section section">
-            <h3 class="section-title">Restaurants</h3>
+            <div class="restaurant-section__container">
+                <h3 class="section-title">Restaurants</h3>    
                 <div class="restaurant-section__card">
                     <article class="card">
                         <a href="La-palette-du-goût.html">
@@ -42,13 +43,12 @@
                             <div class="card__container"> 
                                 <h4 class="card__title">La palette du goût</h4>
                                 <p class="city">Ménilmontant</p>
-                        </div></a>    
-                            <label class="checkbox__container" id="menilmontant">
-                                <input type="checkbox">
+                            </div>
+                            <div class="favorite" id="menilmontant">   
                                 <img class="img-unchecked" src="images/boutons/Status=Default.png" alt="favoris par défaut">
                                 <img class="img-checked" src="images/boutons/Status=Liked.png" alt="favoris ajoutée">
-                            </label>
-                        </div>
+                            </div>
+                        </div></a>
                     </article>
                     <article class="card">
                         <a href="La-note-enchantée.html">   
@@ -58,13 +58,12 @@
                             <div class="card__container">
                                 <h4 class="card__title">La note enchantée</h4>   
                                 <p class="city">Charonne</p>
-                            </div></a>
-                            <label class="checkbox__container" id="charonne">
-                                <input type="checkbox">
+                            </div>
+                            <div class="favorite" id="charonne">
                                 <img class="img-unchecked" src="images/boutons/Status=Default.png" alt="favoris par défaut">
                                 <img class="img-checked" src="images/boutons/Status=Liked.png" alt="favoris ajoutée">
-                            </label>
-                        </div>    
+                            </div>
+                        </div></a>    
                     </article>
                     <article class="card">
                         <a href="À-la-française.html">
@@ -73,13 +72,12 @@
                             <div class="card__container">  
                                 <h4 class="card__title">À la française</h4>
                                 <p class="city">Cité Rouge</p>
-                            </div></a>            
-                            <label class="checkbox__container">
-                                <input type="checkbox">
+                            </div>
+                            <div class="favorite">            
                                 <img class="img-unchecked" src="images/boutons/Status=Default.png" alt="favoris par défaut">
                                 <img class="img-checked" src="images/boutons/Status=Liked.png" alt="favoris ajoutée">
-                            </label>
-                        </div>
+                            </div>
+                        </div></a>
                     </article>
                     <article class="card">
                         <a href="Le-délice-des-sens.html">
@@ -88,24 +86,24 @@
                             <div class="card__container"  >
                                 <h4 class="card__title">Le délice des sens</h4>
                                 <p class="city">Folie-méricourt</p>  
-                            </div></a>
-                            <label class="checkbox__container">
-                                <input type="checkbox">
+                            </div>
+                            <div class="favorite">
                                 <img class="img-unchecked" src="images/boutons/Status=Default.png" alt="favoris par défaut">
                                 <img class="img-checked" src="images/boutons/Status=Liked.png" alt="favoris ajoutée">
-                            </label>
-                        </div>
+                            </div>
+                        </div></a>
                     </article>
                 </div>    
+            </div>
         </section>
         <footer>
             <img class="footer__img" src="images/logo/ohmyfood.png" alt="Logo de Ohmyfood">
                 <div class="footer__list">
                     <ul>
-                        <a id="f-list1" href=""><li class="footer__list"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</li></a> 
-                        <a id="f-list1" href=""><li class="footer__list"><i class="fa-solid fa-handshake-angle"></i>Devenir un partenaire</li></a> 
-                        <a id="f-list2" href=""><li class="footer__list">Mentions légales</li></a>
-                        <a id="f-list2" href=""><li class="footer__list">Contact</li></a>
+                        <a href=""><li class="footer__list"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</li></a> 
+                        <a href=""><li class="footer__list"><i class="fa-solid fa-handshake-angle"></i>Devenir un partenaire</li></a> 
+                        <a href=""><li class="footer__list">Mentions légales</li></a>
+                        <a href=""><li class="footer__list">Contact</li></a>
                     </ul>
                 </div>    
         </footer>
