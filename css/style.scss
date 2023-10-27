@@ -228,14 +228,17 @@ ul{
 
 // media queries
 @media(min-width: 767px){
-  .section{
-  padding:2rem 11.25rem;
-  }
+
   ol{
     display: grid;
     grid-template-columns: 34% 34% 34%;
     width: 98%;
   }
+
+  .restaurant-section__container{
+    max-width: 1080px;
+  }
+  
   .restaurant-section__card{
     display: grid;
     grid-template-columns: repeat(2,2fr);
@@ -269,9 +272,6 @@ ul{
 
 @media(max-width:1240px){
   ol{display: unset;
-  }
-  .section{
-    padding: 1rem 5%;
   }
 
 }
