@@ -18,7 +18,6 @@ ol {
 
 body {
   margin: 0;
-  min-width: 320px;
 }
 
 .section-title {
@@ -96,6 +95,11 @@ header .header__location {
   align-items: center;
   text-align: center;
   background-color: #f6f6f6;
+  padding: 0 0.5rem;
+}
+
+.operation-section__container {
+  padding: 0 1rem;
 }
 
 .top-card {
@@ -109,6 +113,7 @@ header .header__location {
   list-style: none;
   font-weight: bold;
   gap: 0.8rem;
+  font-size: 0.85rem;
 }
 .top-card .operation-section__num {
   position: relative;
@@ -118,17 +123,18 @@ header .header__location {
   padding: 0.3rem;
   background-color: #9356dc;
   color: #ffffff;
-  width: 1.2rem;
+  width: 1rem;
   text-align: center;
 }
 
 .restaurant-section {
   background-color: #f6f6f6;
 }
+.restaurant-section__container {
+  padding: 1rem;
+}
 
 .card {
-  min-width: 21.25rem;
-  height: 15.69rem;
   border-radius: 0.94rem;
   background-color: #ffffff;
   margin: 1rem 0;
@@ -206,8 +212,19 @@ ul {
     grid-template-columns: 34% 34% 34%;
     width: 98%;
   }
+  .operation-section__container {
+    max-width: 1080px;
+    justify-self: center;
+    width: 100%;
+  }
+  section {
+    display: grid;
+    padding: 0 1rem;
+  }
   .restaurant-section__container {
     max-width: 1080px;
+    justify-self: center;
+    width: 100%;
   }
   .restaurant-section__card {
     display: grid;
@@ -216,6 +233,10 @@ ul {
   }
   .card {
     width: 100%;
+    transition: scale 400ms ease-in-out;
+  }
+  .card:hover {
+    scale: 1.05;
   }
   footer .footer__img {
     position: relative;
@@ -235,7 +256,7 @@ ul {
     gap: 1rem;
   }
 }
-@media (max-width: 1240px) {
+@media (max-width: 820px) {
   ol {
     display: unset;
   }

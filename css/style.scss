@@ -40,6 +40,11 @@ cursor : pointer;}
 @mixin card-shadow {
   box-shadow:5px 5px 10px 0 $grey2;}
 
+@mixin container{
+  max-width: 1080px;
+  justify-self: center;
+  width: 100%;
+}
 
 // body
 
@@ -59,7 +64,6 @@ ol{
 
 body{
   margin:0;
-  min-width: 320px;
 }
 
 .section-title{
@@ -122,8 +126,12 @@ header{
   @include column-center;
   text-align: center;
   background-color: $Background;
+  padding: 0 0.5rem;
 }
 
+.operation-section__container{
+  padding: 0 1rem;
+}
 
 .top-card{
   @include card-shadow;
@@ -136,6 +144,7 @@ header{
   list-style: none;
   font-weight: bold;
   gap: 0.8rem;
+  font-size: 0.85rem;
   .operation-section__num{ 
     position:relative;
     right: 1rem;
@@ -144,18 +153,19 @@ header{
     padding: 0.3rem;
     background-color: $Primary;
     color: $White;
-    width: 1.2rem;
+    width: 1rem;
     text-align: center;
  }
 }
  
 .restaurant-section{
   background-color: $Background;
+  &__container{
+    padding: 1rem;
+  }
 }
 
 .card{
-  min-width: 21.25rem;
-  height: 15.69rem;
   border-radius: 0.94rem;
   background-color: $White;
   margin: 1rem 0;
@@ -234,9 +244,18 @@ ul{
     grid-template-columns: 34% 34% 34%;
     width: 98%;
   }
-
+  
+  .operation-section__container{
+    @include container
+  }
+  
+  section{
+    display: grid;
+    padding: 0 1rem;
+   }
+   
   .restaurant-section__container{
-    max-width: 1080px;
+  @include container
   }
   
   .restaurant-section__card{
@@ -246,6 +265,10 @@ ul{
   }
   .card{
     width: 100%;
+    transition: scale 400ms ease-in-out;
+    &:hover{
+      scale: 1.05;
+    }
   }
 
   footer .footer__img{
@@ -270,8 +293,7 @@ ul{
 
 }
 
-@media(max-width:1240px){
+@media(max-width:820px){
   ol{display: unset;
   }
-
 }
