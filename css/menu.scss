@@ -27,16 +27,12 @@ $grey2: #eaeaea;
 body{
     margin:0;
     overflow-x: hidden;
-    background-color: $Background;
+    background-color: $White;
 }
 
 header{
-height: 3%;
+display: flex;
 justify-content: center;
-display: grid;
-grid-template-columns: 33% 33% 33%;
-padding: 0.88rem 0;
-background-color: $White;
     .header__btn{
         width: 10%;
         background-color:$White;
@@ -49,26 +45,27 @@ background-color: $White;
 .header__logo{
     justify-self: center;
     cursor: pointer;
-    width: 100%;
 }
+
 .top-image{
     width: 100%;
-    height: 30rem;
     object-fit: cover;
 }
+
 .fa-arrow-left{
     font-size: medium;
     &__btn{
         background: white;
         border: none;
         cursor: pointer;
+        justify-self: baseline;
     }
 }
     
 .top-title{
     border-radius:1rem;
     transform: translateY(-45px);
-    padding:2rem 1rem 0;
+    padding:2rem 0 0;
     background-color:$Background;
     display: flex;
     justify-content: space-between;
@@ -79,7 +76,6 @@ background-color: $White;
     display: flex;
     position: relative;
     cursor: pointer;
-    padding: 0 1.5rem;
     .img-checked{
       position: absolute;
       opacity:0;
@@ -130,7 +126,6 @@ ul{
     background-color:$White;
     box-shadow: 2px 2px 2px $grey2;
     border-radius: 1rem 1rem;
-    margin: 1rem;
     display: flex;
     justify-content: space-between;
     transition: all 2000ms;
@@ -232,6 +227,7 @@ ul{
 a{
     text-decoration: none;
     color: $White;
+    display: grid;
 }
 
 footer{

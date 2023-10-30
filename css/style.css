@@ -138,6 +138,7 @@ header .header__location {
   border-radius: 0.94rem;
   background-color: #ffffff;
   margin: 1rem 0;
+  transition: scale 400ms ease-in-out;
 }
 .card .card__img {
   -o-object-fit: cover;
@@ -146,6 +147,10 @@ header .header__location {
   border-radius: 1rem 1rem 0 0;
   height: 10rem;
   box-sizing: content-box;
+}
+
+.card:hover {
+  scale: 1.05;
 }
 
 .content__container {
@@ -233,10 +238,6 @@ ul {
   }
   .card {
     width: 100%;
-    transition: scale 400ms ease-in-out;
-  }
-  .card:hover {
-    scale: 1.05;
   }
   footer .footer__img {
     position: relative;
