@@ -6,7 +6,6 @@
 body {
   margin: 0;
   overflow-x: hidden;
-  background-color: #f6f6f6;
 }
 
 header {
@@ -25,7 +24,7 @@ header .header__btn {
 
 .header__logo {
   cursor: pointer;
-  height: 25px;
+  height: 1.7rem;
 }
 
 .top-image {
@@ -103,9 +102,10 @@ main {
   background-color: #f6f6f6;
   border-radius: 2rem 2rem 0 0;
   transform: translateY(-2rem);
+  max-width: 1055px;
 }
 
-.main-content {
+.main__section__content {
   padding: 2rem 1rem;
   border-radius: 1rem;
 }
