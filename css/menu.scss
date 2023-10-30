@@ -1,5 +1,6 @@
 * {
     font-family: 'roboto', sans-serif;
+    box-sizing: border-box;
   }
 
 // variables
@@ -27,46 +28,48 @@ $grey2: #eaeaea;
 body{
     margin:0;
     overflow-x: hidden;
-    background-color: $White;
+    background-color: $Background;
 }
 
 header{
-display: flex;
-justify-content: center;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 65px;
+    position: relative;
+    background-color:$White;
     .header__btn{
         width: 10%;
-        background-color:$White;
         border-style: none;
         cursor: pointer;
-        
     }
 }
 
 .header__logo{
-    justify-self: center;
     cursor: pointer;
+    height: 25px;
 }
 
 .top-image{
     width: 100%;
     object-fit: cover;
+    max-height: 20rem;
 }
 
 .fa-arrow-left{
     font-size: medium;
+    position: absolute;
+    left: 1rem;
+    top: 1.5rem;
     &__btn{
         background: white;
         border: none;
         cursor: pointer;
-        justify-self: baseline;
     }
 }
-    
+
+
 .top-title{
-    border-radius:1rem;
-    transform: translateY(-45px);
-    padding:2rem 0 0;
-    background-color:$Background;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -93,7 +96,7 @@ justify-content: center;
 h1{
     font-family: 'Shrikhand', 'cursive';
     margin: 0;
-    font-size: 1.35rem;
+    font-size: 1.7rem;
 }
 
 h2{
@@ -118,6 +121,17 @@ ul{
     padding: 0;
 }
 
+main{
+    background-color: $Background;
+    border-radius: 2rem 2rem 0 0;
+    transform: translateY(-2rem);
+}
+
+.main-content{
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+}
+
 .menu p{
     margin-bottom: 0.3rem;
 }
@@ -129,6 +143,7 @@ ul{
     display: flex;
     justify-content: space-between;
     transition: all 2000ms;
+    margin: 1rem 0;
     cursor: pointer;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -227,7 +242,6 @@ ul{
 a{
     text-decoration: none;
     color: $White;
-    display: grid;
 }
 
 footer{

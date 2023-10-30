@@ -169,7 +169,6 @@ header{
   border-radius: 0.94rem;
   background-color: $White;
   margin: 1rem 0;
-  transition: scale 400ms ease-in-out;
   .card__img{
     object-fit: cover;
     width:100%;
@@ -178,10 +177,6 @@ header{
     box-sizing: content-box;
   }
 }
-
-.card:hover{
-    scale: 1.05;
-  }
 
 .content__container{
   display: flex;
@@ -270,6 +265,10 @@ ul{
   }
   .card{
     width: 100%;
+    transition: scale 400ms ease-in-out;
+    &:hover{
+      scale: 1.05;
+  }
   }
 
   footer .footer__img{
