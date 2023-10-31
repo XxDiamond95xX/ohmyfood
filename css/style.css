@@ -1,7 +1,3 @@
-* {
-  font-family: "roboto", sans-serif;
-}
-
 h1 {
   font-size: 1.5rem;
   font-weight: bold;
@@ -18,6 +14,7 @@ ol {
 
 body {
   margin: 0;
+  font-family: "roboto", sans-serif;
 }
 
 .section-title {
@@ -30,7 +27,6 @@ body {
   position: relative;
   bottom: 8.5rem;
   float: right;
-  z-index: 2;
   right: 0.5rem;
 }
 
@@ -206,6 +202,102 @@ ul {
   color: white;
 }
 
+.loading {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(#ff79da, #9356dc);
+  font-family: "Shrikhand", "cursive";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: loading-fin 800ms 3000ms both;
+}
+.loading__ustensiles {
+  font-size: 4.5em;
+  color: #ffffff;
+  animation: loading-debut 800ms backwards;
+}
+.loading__cercle {
+  width: 210px;
+  height: 210px;
+  margin: 0 10px;
+  background-color: #ffffff;
+  border-radius: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: loading-debut 800ms backwards;
+}
+.loading__lettre {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(#ff79da, #9356dc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+  font-size: 1.7em;
+  animation: lettres 600ms infinite alternate both ease-in-out;
+}
+.loading__lettre--1 {
+  animation-delay: 75ms;
+}
+.loading__lettre--2 {
+  animation-delay: 150ms;
+}
+.loading__lettre--3 {
+  animation-delay: 225ms;
+}
+.loading__lettre--4 {
+  animation-delay: 300ms;
+}
+.loading__lettre--5 {
+  animation-delay: 375ms;
+}
+.loading__lettre--6 {
+  animation-delay: 450ms;
+}
+.loading__lettre--7 {
+  animation-delay: 525ms;
+}
+.loading__lettre--8 {
+  animation-delay: 600ms;
+}
+.loading__verre {
+  font-size: 4.5em;
+  color: #ffffff;
+  animation: loading-debut 800ms backwards;
+}
+
+@keyframes loading-debut {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes loading-fin {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes lettres {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @media (min-width: 767px) {
   ol {
     display: grid;
@@ -220,6 +312,9 @@ ul {
   section {
     display: grid;
     padding: 0 1rem;
+  }
+  .section-title {
+    margin: 1rem 0;
   }
   .restaurant-section__container {
     max-width: 1080px;
