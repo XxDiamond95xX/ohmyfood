@@ -106,10 +106,12 @@ body{
 background:linear-gradient(#ff79da,#9356dc,); 
 @include button;
 border-style: hidden;
-transition: filter;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+transition: all;
 transition-duration: 400ms;
 &:hover {
   filter: brightness(1.2);
+  box-shadow: rgba(0, 0, 0, 0.35) 5px 15px 20px;
   }
 }
 
@@ -176,6 +178,7 @@ header{
   border-radius: 0.94rem;
   background-color: $White;
   margin: 1rem 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 2.5px 7.5px;
   .card__img{
     object-fit: cover;
     width:100%;

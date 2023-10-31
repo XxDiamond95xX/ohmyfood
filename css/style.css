@@ -56,11 +56,13 @@ body {
   margin-bottom: 3.57rem;
   cursor: pointer;
   border-style: hidden;
-  transition: filter;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: all;
   transition-duration: 400ms;
 }
 .btn:hover {
   filter: brightness(1.2);
+  box-shadow: rgba(0, 0, 0, 0.35) 5px 15px 20px;
 }
 
 header {
@@ -134,6 +136,7 @@ header .header__location {
   border-radius: 0.94rem;
   background-color: #ffffff;
   margin: 1rem 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 2.5px 7.5px;
 }
 .card .card__img {
   -o-object-fit: cover;

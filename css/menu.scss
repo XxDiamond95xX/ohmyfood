@@ -25,6 +25,10 @@ $grey2: #eaeaea;
     padding: 0.5rem;
 }
 
+html, body{
+    height: 100%;
+}
+
 body{
     margin:0;
     overflow-x: hidden;
@@ -36,7 +40,6 @@ header{
     align-items: center;
     height: 65px;
     position: relative;
-    background-color:$White;
     width: 100%;
     padding: 1rem;
     .header__btn{
@@ -48,27 +51,29 @@ header{
 
 .header__logo{
     cursor: pointer;
-    height: 1.7rem;
+    height: 1.6rem;
 }
 
 .top-image{
     width: 100%;
     object-fit: cover;
-    max-height: 20rem;
+    height: 20rem;
+    position: absolute;
+    top: 4rem;
+    z-index: 1;
 }
 
 .fa-arrow-left{
     font-size: medium;
     position: absolute;
     left: 1rem;
-    top: 1.5rem;
+    top: 1.3rem;
     &__btn{
         background: white;
         border: none;
         cursor: pointer;
     }
 }
-
 
 .top-title{
     display: flex;
@@ -86,10 +91,6 @@ header{
       transition:opacity 400ms ease-in-out;
       &:hover{
       opacity: 100%;
-      .img-unchecked{
-        position: absolute;
-        height: 1.3rem;
-        }
       }
     }
   }
@@ -97,7 +98,7 @@ header{
 h1{
     font-family: 'Shrikhand', 'cursive';
     margin: 0;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
 }
 
 h2{
@@ -122,10 +123,16 @@ ul{
     padding: 0;
 }
 
+li{
+    display: flex;
+}
+
 main{
     background-color: $Background;
     border-radius: 2rem 2rem 0 0;
-    transform: translateY(-2rem);
+    z-index: 2;
+    top: 18rem;
+    position: relative;
 
 }
 
@@ -250,7 +257,9 @@ footer{
     background-color: $Grey; 
     color: $White;
     padding:1.38rem 1.63rem;
-    transform: translateY(-2.5rem);
+    z-index: 3;
+    position: relative;
+    top: 18rem;
     .footer__img{
       height:1rem;
       filter: invert(100%);
@@ -260,7 +269,6 @@ footer{
 .footer__list{
     list-style: none;
     padding: 0.5rem 0;
-    display: flex;
     gap: 0.5rem;
     color:$White;
   }
@@ -328,9 +336,7 @@ footer .footer__img{
     gap: 1rem;
   }
 
-html, body{
-    height: 100%;
-}
+
 
 }
 
