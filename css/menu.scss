@@ -97,7 +97,6 @@ header{
 
 h1{
     font-family: 'Shrikhand', 'cursive';
-    margin: 0;
     font-size: 1.5rem;
 }
 
@@ -162,7 +161,6 @@ main{
         background-color: $Green;
         cursor: pointer;
         color:$Background;
-
     }
 }
 
@@ -207,6 +205,14 @@ main{
     transform: translateX(100px);
     transition: all ease-out 500ms;
     width: 0;
+}
+
+.fa-check-circle{
+    transition: .5s ease-in-out;
+}
+    
+.card:hover .fa-check-circle{
+    transform: rotate(360deg);   
 }
 
 .card__txt__detail p{
@@ -281,7 +287,15 @@ footer{
         opacity:1
         translateY(0)
     }}
-
+@keyframes rotate {
+    
+    0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+}}
+    
 @media(min-width: 767px){
 
 body{
@@ -322,21 +336,19 @@ footer .footer__img{
     top: 2rem;
 }
 
-  .footer__list{
+.footer__list{
     width: 100%;
     display: flex;
     justify-content: end;
     position: relative;
     right: 4rem;
     bottom: 0.55rem;
-  }
+}
 
-  ul{
+ul{
     display: inline-flex;
     gap: 1rem;
-  }
-
-
+}
 
 }
 

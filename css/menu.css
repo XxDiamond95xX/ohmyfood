@@ -76,7 +76,6 @@ header .header__btn {
 
 h1 {
   font-family: "Shrikhand", "cursive";
-  margin: 0;
   font-size: 1.5rem;
 }
 
@@ -207,6 +206,14 @@ main {
   width: 0;
 }
 
+.fa-check-circle {
+  transition: 0.5s ease-in-out;
+}
+
+.card:hover .fa-check-circle {
+  transform: rotate(360deg);
+}
+
 .card__txt__detail p {
   overflow: hidden;
   white-space: nowrap;
@@ -277,6 +284,14 @@ footer .footer__img {
   }
   100% {
     opacity: 1 translateY(0);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 @media (min-width: 767px) {
