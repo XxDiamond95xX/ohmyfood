@@ -1,0 +1,42 @@
+@mixin button-gradient{
+    background-color:linear-gradient(#9356dc,#ff79da);}
+    
+    @mixin column-center{
+      display:flex;
+      flex-direction: column;
+      align-items: center;}
+    
+    @mixin row-center{
+      display: flex;
+      align-items: center;
+      justify-content: center;}
+    
+    @mixin button{
+    border-radius:2rem;
+    padding: 0.81rem 1.17rem;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: $White;
+    cursor : pointer;}
+    
+    @mixin card-shadow {
+      box-shadow:5px 5px 10px 0 $grey2;}
+    
+    @mixin container{
+      max-width: 1080px;
+      justify-self: center;
+      width: 100%;
+    }
+    @mixin degrade{
+      background:linear-gradient(#ff79da,#9356dc,);
+    }
+    @mixin txt{
+        display: flex;
+        flex: 100%;
+        white-space: nowrap;
+        flex-direction: column;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        transition: all 700ms;
+        padding: 0.5rem;
+    }

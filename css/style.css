@@ -1,7 +1,6 @@
 h1 {
   font-size: 1.5rem;
   font-weight: bold;
-  padding: 0 3rem;
 }
 
 .fa-store {
@@ -50,10 +49,9 @@ body {
   background: linear-gradient(#ff79da, #9356dc);
   border-radius: 2rem;
   padding: 0.81rem 1.17rem;
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: bold;
   color: #ffffff;
-  margin-bottom: 3.57rem;
   cursor: pointer;
   border-style: hidden;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -80,11 +78,10 @@ header .header__location {
   justify-content: center;
   width: 100%;
   background-color: #eaeaea;
+  gap: 0.5rem;
 }
-
-.header__location__city {
+header .header__location__city {
   font-weight: bold;
-  padding: 0 1rem;
 }
 
 .exploration-section {
@@ -94,10 +91,13 @@ header .header__location {
   text-align: center;
   background-color: #f6f6f6;
   padding: 0 0.5rem;
+  height: 15rem;
 }
 
-.operation-section__container {
-  padding: 0 1rem;
+.section__container {
+  padding: 1rem;
+  max-width: 1080px;
+  width: 100%;
 }
 
 .top-card {
@@ -315,6 +315,7 @@ ul {
   section {
     display: grid;
     padding: 0 1rem;
+    justify-items: center;
   }
   .section-title {
     margin: 1rem 0;

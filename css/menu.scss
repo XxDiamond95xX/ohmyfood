@@ -3,16 +3,6 @@
     box-sizing: border-box;
   }
 
-// variables
-$Background:#f6f6f6;
-$Primary: #9356dc;
-$Secondary: #fca311;
-$Green: #99E2D0;
-$Green-font: #008766;
-$White: #ffffff;
-$Black:#101010;
-$Grey: #353535;
-$grey2: #eaeaea;
 
 @mixin txt{
     display: flex;
@@ -156,7 +146,7 @@ main{
     overflow: hidden;
     text-overflow: ellipsis;
     &:hover >.card__check{
-        flex: 25%;
+        flex: 4.31rem;
         transform: translateX(0px);
         background-color: $Green;
         cursor: pointer;

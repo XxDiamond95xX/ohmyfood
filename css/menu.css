@@ -135,7 +135,7 @@ main {
   text-overflow: ellipsis;
 }
 .card:hover > .card__check {
-  flex: 25%;
+  flex: 4.31rem;
   transform: translateX(0px);
   background-color: #99E2D0;
   cursor: pointer;

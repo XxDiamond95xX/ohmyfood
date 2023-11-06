@@ -1,64 +1,8 @@
-// variables
-$Background:#f6f6f6;
-$Primary: #9356dc;
-$Secondary: #fca311;
-$Green: #99E2D0;
-$Green-font: #008766;
-$White: #ffffff;
-$Black:#101010;
-$Grey: #353535;
-$grey2: #eaeaea;
-$loading-dur: 2000ms;
-$loading-delay: 200ms;
-$loading-debut-dur: 800ms;
-$loading-fin-delay: $loading-debut-dur + $loading-dur + $loading-delay;
-$loading-fin-dur: 800ms;
-$num-lettres: 8;
-$lettre-dur: 600ms;
-$lettre-delay: 75ms;
-$police-logotitre:'Shrikhand', 'cursive';
-
-// mixin
-@mixin button-gradient{
-background-color:linear-gradient(#9356dc,#ff79da);}
-
-@mixin column-center{
-  display:flex;
-  flex-direction: column;
-  align-items: center;}
-
-@mixin row-center{
-  display: flex;
-  align-items: center;
-  justify-content: center;}
-
-@mixin button{
-border-radius:2rem;
-padding: 0.81rem 1.17rem;
-font-size: 1rem;
-font-weight: bold;
-color: $White;
-margin-bottom: 3.57rem;
-cursor : pointer;}
-
-@mixin card-shadow {
-  box-shadow:5px 5px 10px 0 $grey2;}
-
-@mixin container{
-  max-width: 1080px;
-  justify-self: center;
-  width: 100%;
-}
-@mixin degrade{
-  background:linear-gradient(#ff79da,#9356dc,);
-}
- 
 // body
 
 h1 {
   font-size: 1.5rem;
   font-weight:bold;
-  padding: 0 3rem;
 }
 
 .fa-store{
@@ -123,12 +67,11 @@ header{
     .header__location{
       @include row-center;
       width: 100%;
-      background-color: $grey2;}
+      background-color: $grey2;
+      gap: 0.5rem;}
+      .header__location__city{
+        font-weight: bold;
 }
-
-.header__location__city{
-  font-weight: bold;
-  padding: 0 1rem;
 }
 
 .exploration-section{
@@ -136,10 +79,13 @@ header{
   text-align: center;
   background-color: $Background;
   padding: 0 0.5rem;
+  height: 15rem;
 }
 
-.operation-section__container{
-  padding: 0 1rem;
+.section__container{
+  padding:1rem;
+  max-width: 1080px;
+  width: 100%;
 }
 
 .top-card{
@@ -350,6 +296,7 @@ ul{
   section{
     display: grid;
     padding: 0 1rem;
+    justify-items: center;
    }
 
   .section-title{
