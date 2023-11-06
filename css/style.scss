@@ -1,7 +1,10 @@
+@import "mixin";
+@import "variables";
+
 // body
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight:bold;
 }
 
@@ -85,7 +88,6 @@ header{
 .section__container{
   padding:1rem;
   max-width: 1080px;
-  width: 100%;
 }
 
 .top-card{
@@ -289,7 +291,7 @@ ul{
     width: 98%;
   }
   
-  .operation-section__container{
+.section__container{
     @include container
   }
   

@@ -2,18 +2,8 @@
     font-family: 'roboto', sans-serif;
     box-sizing: border-box;
   }
-
-
-@mixin txt{
-    display: flex;
-    flex: 100%;
-    white-space: nowrap;
-    flex-direction: column;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    transition: all 700ms;
-    padding: 0.5rem;
-}
+@import "mixin";
+@import "variables";
 
 html, body{
     height: 100%;
@@ -93,6 +83,11 @@ h1{
 h2{
     font-weight:300 ;
     font-size: 16px;
+    animation-name: appear;
+    animation-duration: 1000ms;
+    animation-fill-mode: backwards;
+    animation-delay: 1s;
+
 }
 
 h3{
@@ -208,7 +203,7 @@ main{
 .card__txt__detail p{
     overflow: hidden;
     white-space: nowrap;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
 }
 
 .card__txt__detail{
