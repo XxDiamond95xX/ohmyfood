@@ -160,7 +160,7 @@ main {
   text-overflow: ellipsis;
   overflow: hidden;
   transition: all 700ms;
-  padding: 0.5rem;
+  margin: 0.5rem;
 }
 
 .plats__card {
@@ -177,7 +177,7 @@ main {
   text-overflow: ellipsis;
   overflow: hidden;
   transition: all 700ms;
-  padding: 0.5rem;
+  margin: 0.5rem;
 }
 
 .dessert__card {
@@ -194,7 +194,7 @@ main {
   text-overflow: ellipsis;
   overflow: hidden;
   transition: all 700ms;
-  padding: 0.5rem;
+  margin: 0.5rem;
 }
 
 .card__check {
@@ -221,7 +221,7 @@ main {
 .card__txt__detail p {
   overflow: hidden;
   white-space: nowrap;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
 }
 
 .card__txt__detail {
