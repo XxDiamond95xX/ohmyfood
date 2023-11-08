@@ -173,8 +173,9 @@ h3{
     color: $Background;
     background-color: #99e2d0;
     font-size: x-large;
-    text-align: center;
-    line-height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     white-space: nowrap;
     transform: translateX(100px);
     transition: all ease-out 500ms;
