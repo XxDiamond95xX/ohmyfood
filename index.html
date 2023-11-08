@@ -8,16 +8,15 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&family=Shrikhand&display=swap" rel="stylesheet">  
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/mixin.css">
         <title>Ohmyfood</title>
     </head>
+    
     <body>
         <div class="bloc-page">
-                <!--Section en-tête-->
-                <div class="loading">
-                  <i class="fas fa-utensils loading__ustensiles"></i>
-                  <div class="loading__cercle">
+            <!--Section en-tête-->
+            <div class="loading">
+                <i class="fas fa-utensils loading__ustensiles"></i>
+                <div class="loading__cercle">
                     <div class="loading__lettre loading__lettre--1">O</div>
                     <div class="loading__lettre loading__lettre--2">h</div>
                     <div class="loading__lettre loading__lettre--3">m</div>
@@ -26,9 +25,9 @@
                     <div class="loading__lettre loading__lettre--6">o</div>
                     <div class="loading__lettre loading__lettre--7">o</div>
                     <div class="loading__lettre loading__lettre--8">d</div>
-                  </div>
-                  <i class="fas fa-wine-glass-alt loading__verre"></i>
                 </div>
+                <i class="fas fa-wine-glass-alt loading__verre"></i>
+            </div>
             <header>
                 <img class="header__logo" src="images/logo/ohmyfood@2x.svg" alt="logo de Ohmyfood">
                 <div class="header__location">
@@ -54,7 +53,7 @@
                 </div>
             </section>
             <section class="restaurant-section section">
-                <div class="restaurant-section__container">
+                <div class="section__container">
                     <h3 class="section-title">Restaurants</h3>    
                     <div class="restaurant-section__card">
                         <article class="card">
@@ -120,14 +119,32 @@
             </section>
             <footer>
                 <img class="footer__img" src="images/logo/ohmyfood@2x.svg" alt="Logo de Ohmyfood">
-                    <div class="footer__list">
-                        <ul>
-                            <a href=""><li class="footer__list"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</li></a> 
-                            <a href=""><li class="footer__list"><i class="fa-solid fa-handshake-angle"></i>Devenir un partenaire</li></a> 
-                            <a href=""><li class="footer__list">Mentions légales</li></a>
-                            <a href="mailto:ohmyfood@food.com"><li class="footer__list">Contact</li></a>
-                        </ul>
-                    </div>    
+                <div class="footer__list">
+                    <ul>
+                        <a href="#">
+                            <li class="footer__list">
+                                <i class="fa-solid fa-utensils"></i>
+                                Proposer un restaurant
+                            </li>
+                        </a> 
+                        <a href="#">
+                            <li class="footer__list">
+                                <i class="fa-solid fa-handshake-angle"></i>
+                                Devenir un partenaire
+                            </li>
+                        </a> 
+                        <a href="#">
+                            <li class="footer__list">
+                                Mentions légales
+                            </li>
+                        </a>
+                        <a href="mailto:ohmyfood@food.com">
+                            <li class="footer__list">
+                                Contact
+                            </li>
+                        </a>
+                    </ul>
+                </div>    
             </footer>
         </div>
     </body>
