@@ -207,9 +207,9 @@ ol{
   .img-checked{
     position: absolute;
     opacity:0;
-    transition:opacity 400ms ease-in-out;
+    transition:opacity 800ms ease-in-out;
     &:hover{
-    opacity: 100%;
+     opacity : 100%;
     .img-unchecked{
       position: absolute;
       }
@@ -321,7 +321,7 @@ ul{
     width: 100%;
     transition: scale 700ms ease-in-out;
     &:hover{
-      transform: scale (1.05);
+     scale : 1.05;
     }
   }
   

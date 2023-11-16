@@ -39,6 +39,7 @@ body {
   padding: 0;
   background: linear-gradient(#ff79da, #9356dc);
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   text-align: center;
   font-size: 1.7em;
@@ -232,7 +233,7 @@ ol {
 .favorite .img-checked {
   position: absolute;
   opacity: 0;
-  transition: opacity 400ms ease-in-out;
+  transition: opacity 800ms ease-in-out;
 }
 .favorite .img-checked:hover {
   opacity: 100%;
@@ -333,11 +334,10 @@ ul {
   }
   .card {
     width: 100%;
-    transition: all 700ms ease-in-out;
+    transition: scale 700ms ease-in-out;
   }
-  
-.card:hover {
-    transform: scale(1.05);
+  .card:hover {
+    scale: 1.05;
   }
   footer .footer__img {
     position: relative;
