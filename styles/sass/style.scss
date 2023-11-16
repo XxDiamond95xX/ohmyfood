@@ -242,12 +242,16 @@ footer{
     }
 }
 
-.footer__list{
-  list-style: none;
+.footer__list a{
   padding: 0.5rem 0;
   display: flex;
   gap: 0.5rem;
   color: white;
+  white-space: nowrap;
+}
+
+.footer__list{
+  list-style: none;
 }
 
 ul{
@@ -315,16 +319,16 @@ ul{
   
   .card{
     width: 100%;
-    transition: scale 400ms ease-in-out;
+    transition: scale 700ms ease-in-out;
     &:hover{
-      scale: 1.05;
+      transform: scale (1.05);
     }
   }
   
   footer .footer__img{
     position: relative;
     float: right;
-    top: 2rem;
+    top: 1.5rem;
 }
 
   .footer__list{
