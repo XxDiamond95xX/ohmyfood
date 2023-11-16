@@ -80,7 +80,7 @@ main {
 .favorite .img-checked {
   position: absolute;
   opacity: 0;
-  transition: opacity 800ms ease-in-out;
+  transition: opacity 650ms ease-in-out;
 }
 .favorite .img-checked:hover {
   opacity: 100%;
