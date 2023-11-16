@@ -336,6 +336,7 @@ a {
     position: relative;
     right: 4rem;
     bottom: 0.55rem;
+    white-space: nowrap;
   }
   ul {
     display: inline-flex;
