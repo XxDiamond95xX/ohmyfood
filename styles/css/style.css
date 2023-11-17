@@ -335,10 +335,10 @@ ul {
   }
   .card {
     width: 100%;
-    transition: scale 700ms ease-in-out;
+    transition: all 700ms ease-in-out;
   }
   .card:hover {
-    scale: 1.05;
+    transform: scale(1.05);
   }
   footer .footer__img {
     position: relative;
